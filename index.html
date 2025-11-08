@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List & Timer</title>
+
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+  <!-- =================== TOP BAR =================== -->
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button class="toggle-btn">Hide To-Do</button>
+    </div>
+    <div style="font-weight:900;font-size:28px;">{{ today }}</div>
+  </div>
+
+  <!-- =================== MAIN CONTAINER =================== -->
+  <div class="container">
+    <!-- ======== LEFT: TO-DO LIST ======== -->
+    <div class="left">
+      <div class="card">
+        <div style="font-size:44px;font-weight:900;">To-Do</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;">
+          <div class="muted">Plan your work — click a task when done.</div>
+          <button class="btn">+ add</button>
+        </div>
+
+        <div class="todo-list">
+          {{ todo_rows }}
+        </div>
+      </div>
+    </div>
+
+    <!-- ======== RIGHT: TIMER ======== -->
+    <div class="right">
+      <div class="timer-circle">
+        <div class="timer-display">0:00</div>
+      </div>
+
+      <div class="preset-row">
+        <div class="small-pill button">Focus</div>
+        <div class="small-pill button">Short Break</div>
+        <div class="small-pill button">Long Break</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn pause">⏸</button>
+        <button class="btn green">▶</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

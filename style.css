@@ -1,0 +1,172 @@
+/* ======== COLOR THEME ======== */
+:root {
+  --blue: #044fa3;
+  --bright-blue: #0060c0;
+  --cyan: #12c6db;
+  --light: #f0fdfd;
+  --accent: #ff6b6b;
+  --green: #0a8a45;
+  --card: #063f9b;
+}
+
+/* ======== GLOBAL ======== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", Arial, sans-serif;
+  background: var(--light);
+}
+
+/* ======== TOP BAR ======== */
+.topbar {
+  background: var(--card);
+  color: white;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.toggle-btn {
+  background: white;
+  color: var(--card);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+/* ======== LAYOUT CONTAINER ======== */
+.container {
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+}
+
+/* ======== LEFT PANEL (TO-DO) ======== */
+.left {
+  flex: 1;
+  min-width: 420px;
+}
+
+.card {
+  background: var(--card);
+  color: white;
+  padding: 22px;
+  border-radius: 6px;
+}
+
+.todo-list {
+  background: #eaf7ff;
+  color: var(--card);
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.todo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--card);
+  flex: 1;
+}
+
+.small-pill {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--card);
+  font-weight: 700;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.06);
+}
+
+.muted {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+/* ======== RIGHT PANEL (TIMER) ======== */
+.right {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: #8b9191;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display {
+  background: white;
+  padding: 18px 36px;
+  border-radius: 28px;
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.preset-row {
+  display: flex;
+  gap: 12px;
+}
+
+.small-pill.button {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.small-pill.button:hover {
+  transform: translateY(-2px);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn.green { background: var(--green); }
+.btn.pause { background: #ff5454; }
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+  }
+  .right, .left {
+    width: 100%;
+    min-width: 0;
+  }
+}
